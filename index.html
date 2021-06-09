@@ -28,7 +28,7 @@
 							<button class="btn btn-default" v-on:click="_setName">命名</button>
 						</div>
 						<span v-else>{{ name }}</span>
-						<h1>修為: {{ numFilter.txt( point.round().toString() ) }} </h1>
+						<h1>修为: {{ numFilter.txt( point.round().toString() ) }} </h1>
 				</div> 
 				<div class="row">
 	            	<div class="col-md-4 text-left">
@@ -43,7 +43,7 @@
 						<p>每秒
 						<template v-if="!pointPerSec.lessThan(0)">增加</template>
 						<template v-else>減少</template>
-						{{ numFilter.txt( pointPerSec.abs().times(10).round().toString() ) }} 修為</p>
+						{{ numFilter.txt( pointPerSec.abs().times(10).round().toString() ) }} 修为</p>
 	            	</div> 
 				</div> 
 				<hr/>
@@ -61,9 +61,9 @@
 					</tr>
 					<tr>
 						<td><h4>{{ body.name }}</h4></td>
-						<td>每次修練增加 {{ numFilter.txt( body.num.toString() ) }} 修為</td>
+						<td>每次修練增加 {{ numFilter.txt( body.num.toString() ) }} 修为</td>
 						<td>
-							<template v-if="!body.top"> {{ numFilter.txt( body.need.toString() ) }} 修為</template>
+							<template v-if="!body.top"> {{ numFilter.txt( body.need.toString() ) }} 修为</template>
 						</td>
 						<td>
 							<button class="btn btn-default" v-on:click="_bodyLvUp" :disabled="point.lessThan( body.need ) || body.top "> 升級</button>
@@ -78,7 +78,7 @@
 						<td>可修練 {{ talent.num.toString() }} 項功法</td>
 						<td>
 							<template v-if="!talent.top">
-							{{ numFilter.txt( talent.need.toString() ) }} 修為
+							{{ numFilter.txt( talent.need.toString() ) }} 修为
 							</template>	
 						</td>
 						<td>
@@ -92,8 +92,8 @@
 						</td>
 						<td colspan="2" class="text-center">
 							<template v-if="talent.num.greaterThan( skills.length)">
-							門檻需達 {{ numFilter.txt( level.max.div(2).toString() ) }} 修為，
-							消耗修為至{{skills.length+2}}分之一
+							門檻需達 {{ numFilter.txt( level.max.div(2).toString() ) }} 修为，
+							消耗修为至{{skills.length+2}}分之一
 							</template>	
 						</td>
 						<td>
@@ -109,7 +109,7 @@
 						</td> 
 						<td> 
 							<template v-if="!skill.object.top">
-							{{ numFilter.txt( skill.object.need.toString() ) }} 修為
+							{{ numFilter.txt( skill.object.need.toString() ) }} 修为
 							</template>
 						</td>
 						<td>
@@ -161,20 +161,20 @@
 				<table v-bind:style="tableCss" id="items"  class="table table-bordered table-condensed">
 					<tr v-bind:style="Tr4css" id="itemRow">
 						<td class="text-left">
-						法寶：{{ items.length }}個
+						法宝：{{ items.length }}個
 						</td>
 						<td colspan="2" class="text-center">
 							<template v-if="itemWait!=0">
-							下次秘境開啟 {{ itemWait }} 秒 ， 
+							下次秘境开启 {{ itemWait }} 秒 ， 
 							</template>
-							門檻需達 {{ numFilter.txt( level.max.div(2).greaterThan( itemCost ) ? level.max.div(2).toString() : itemCost.toString() ) }} 修為，
-							消耗九成修為<br/>
-							擁有法寶越多、糾纏的業果越多，會開始消耗壽元
+							门槛需达到 {{ numFilter.txt( level.max.div(2).greaterThan( itemCost ) ? level.max.div(2).toString() : itemCost.toString() ) }} 修为，
+							消耗九成修为<br/>
+							擁有法宝越多、糾纏的業果越多，會開始消耗壽元
 						</td>
 						<td class="text-center">
-							<button class="btn btn-default" v-on:click="_getNewItem" :disabled="point.lessThan( level.max.div(2) ) || point.lessThan(itemCost) || itemWait!=0 "> 尋找機緣</button>							
+							<button class="btn btn-default" v-on:click="_getNewItem" :disabled="point.lessThan( level.max.div(2) ) || point.lessThan(itemCost) || itemWait!=0 "> 寻找机缘</button>							
 							<template v-if="items.length!=0">
-							<button class="btn btn-default" v-on:click="_removeItems">捨斷因果</button> 
+							<button class="btn btn-default" v-on:click="_removeItems">舍断因果</button> 
 							</template>
 						</td>
 					</tr>
@@ -204,8 +204,8 @@
 
 				<div>
 					<input id="data" v-bind:style="dataCss" type="text" v-model="record" >
-					<button class="btn btn-default" v-on:click="_showData">紀錄傳承</button>
-					<button class="btn btn-default" v-on:click="_loadData">接受傳承</button>
+					<button class="btn btn-default" v-on:click="_showData">导出存档</button>
+					<button class="btn btn-default" v-on:click="_loadData">导入存档</button>
 				</div>
 
 				<hr/>
