@@ -1,11 +1,11 @@
-
+﻿
 var skills = {
-	// 正統功法 ===============================================
+	// 正统功法 ===============================================
 	a0_0 : {
 		id: 'a0_0',
 		top: false,
-		degree: "入門",
-		info: "每秒增加10正統修為",
+		degree: "入门",
+		info: "每秒增加10正统修为",
 		need: new BigNumber(500),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus(1);
@@ -18,8 +18,8 @@ var skills = {
 	a0_1 : {
 		id: 'a0_1',
 		top: false,
-		degree: "初級",
-		info: "每秒增加30正統修為",
+		degree: "初级",
+		info: "每秒增加30正统修为",
 		need: new BigNumber(2000),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus(3);
@@ -31,8 +31,8 @@ var skills = {
 	a0_2 : {
 		id: 'a0_2',
 		top: false,
-		degree: "中級",
-		info: "每秒增加50正統修為",
+		degree: "中级",
+		info: "每秒增加50正统修为",
 		need: new BigNumber(10).pow(4).times(4),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus(5);
@@ -44,8 +44,8 @@ var skills = {
 	a0_3 : {
 		id: 'a0_3',
 		top: false,
-		degree: "高級",
-		info: "每秒增加200正統修為",
+		degree: "高级",
+		info: "每秒增加200正统修为",
 		need: new BigNumber(10).pow(5).times(7),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus(20);
@@ -57,8 +57,8 @@ var skills = {
 	a0_4 : {
 		id: 'a0_4',
 		top: false,
-		degree: "進階",
-		info: "每秒增加2,000正統修為",
+		degree: "进阶",
+		info: "每秒增加2,000正统修为",
 		need: new BigNumber(10).pow(7).times(2),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus(200);
@@ -71,7 +71,7 @@ var skills = {
 		id: 'a0_5',
 		top: false,
 		degree: "精通",
-		info: "每秒增加10,000正統修為",
+		info: "每秒增加10,000正统修为",
 		need: new BigNumber(10).pow(9).times(3),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus(1000);
@@ -84,7 +84,7 @@ var skills = {
 		id: 'a0_6',
 		top: false,
 		degree: "高手",
-		info: "每秒增加3,333,000正統修為",
+		info: "每秒增加3,333,000正统修为",
 		need: new BigNumber(10).pow(11),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus(333300);
@@ -96,8 +96,8 @@ var skills = {
 	a0_7 : {
 		id: 'a0_7',
 		top: false,
-		degree: "大師",
-		info: "每秒增加50,505,050正統修為，增加1點壽元",
+		degree: "大师",
+		info: "每秒增加50,505,050正统修为，增加1点寿元",
 		need: new BigNumber(10).pow(12),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus(5050505);
@@ -110,8 +110,8 @@ var skills = {
 	a0_8 : {
 		id: 'a0_8',
 		top: true,
-		degree: "宗師",
-		info: "每秒增加111,111,110正統修為，增加2點壽元",
+		degree: "宗师",
+		info: "每秒增加111,111,110正统修为，增加2点寿元",
 		need: new BigNumber(10).pow(16),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus(11111111);
@@ -121,12 +121,12 @@ var skills = {
 		getPrev: () => { return skills.a0_7 },
 		getNext: () => { return null },
 	},
-	//先苦後甘型
+	//先苦后甘型
 	a1_0 : {
 		id: 'a1_0',
 		top: false,
-		degree: "入門",
-		info: "每秒增加10正統修為",
+		degree: "入门",
+		info: "每秒增加10正统修为",
 		need: new BigNumber(1000),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus(1);
@@ -139,8 +139,8 @@ var skills = {
 	a1_1 : {
 		id: 'a1_1',
 		top: false,
-		degree: "初級",
-		info: "每秒增加30正統修為",
+		degree: "初级",
+		info: "每秒增加30正统修为",
 		need: new BigNumber(5000),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus(3);
@@ -152,8 +152,8 @@ var skills = {
 	a1_2 : {
 		id: 'a1_2',
 		top: false,
-		degree: "中級",
-		info: "每秒增加50正統修為",
+		degree: "中级",
+		info: "每秒增加50正统修为",
 		need: new BigNumber(10).pow(5),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus(5);
@@ -165,8 +165,8 @@ var skills = {
 	a1_3 : {
 		id: 'a1_3',
 		top: false,
-		degree: "高級",
-		info: "每秒增加100正統修為",
+		degree: "高级",
+		info: "每秒增加100正统修为",
 		need: new BigNumber(10).pow(6).times(3),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus(10);
@@ -178,8 +178,8 @@ var skills = {
 	a1_4 : {
 		id: 'a1_4',
 		top: false,
-		degree: "進階",
-		info: "每秒增加1,000正統修為，修行心性",
+		degree: "进阶",
+		info: "每秒增加1,000正统修为，修行心性",
 		need: new BigNumber(10).pow(8).times(4),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus(100);
@@ -192,7 +192,7 @@ var skills = {
 		id: 'a1_5',
 		top: false,
 		degree: "精通",
-		info: "每秒增加10,000正統修為，修行心性、延年益壽",
+		info: "每秒增加10,000正统修为，修行心性、延年益寿",
 		need: new BigNumber(10).pow(10).times(5),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus(1000);
@@ -206,7 +206,7 @@ var skills = {
 		id: 'a1_6',
 		top: false,
 		degree: "高手",
-		info: "每秒增加200,000正統修為，修行心性、延年益壽",
+		info: "每秒增加200,000正统修为，修行心性、延年益寿",
 		need: new BigNumber(10).pow(11),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus(20000);
@@ -219,8 +219,8 @@ var skills = {
 	a1_7 : {
 		id: 'a1_7',
 		top: false,
-		degree: "大師",
-		info: "每秒增加3,000,000正統修為，修行心性、延年益壽",
+		degree: "大师",
+		info: "每秒增加3,000,000正统修为，修行心性、延年益寿",
 		need: new BigNumber(10).pow(13),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus(300000);
@@ -233,8 +233,8 @@ var skills = {
 	a1_8 : {
 		id: 'a1_8',
 		top: true,
-		degree: "宗師",
-		info: "每秒增加99,999,999,990正統修為，修行心性、延年益壽",
+		degree: "宗师",
+		info: "每秒增加99,999,999,990正统修为，修行心性、延年益寿",
 		need: new BigNumber(10).pow(16),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus(9999999999);
@@ -244,12 +244,12 @@ var skills = {
 		getPrev: () => { return skills.a1_7 },
 		getNext: () => { return null },
 	},
-	// 純練正功
+	// 纯练正功
 	a2_0 : {
 		id: 'a2_0',
 		top: false,
-		degree: "入門",
-		info: "每秒增加10正統修為",
+		degree: "入门",
+		info: "每秒增加10正统修为",
 		need: new BigNumber(500),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus(1);
@@ -262,8 +262,8 @@ var skills = {
 	a2_1 : {
 		id: 'a2_1',
 		top: false,
-		degree: "初級",
-		info: "每秒增加50正統修為",
+		degree: "初级",
+		info: "每秒增加50正统修为",
 		need: new BigNumber(5000),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus(5);
@@ -275,8 +275,8 @@ var skills = {
 	a2_2 : {
 		id: 'a2_2',
 		top: false,
-		degree: "中級",
-		info: "每秒增加300正統修為",
+		degree: "中级",
+		info: "每秒增加300正统修为",
 		need: new BigNumber(10).pow(4).times(4),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus(30);
@@ -288,8 +288,8 @@ var skills = {
 	a2_3 : {
 		id: 'a2_3',
 		top: false,
-		degree: "高級",
-		info: "每秒增加1,000正統修為",
+		degree: "高级",
+		info: "每秒增加1,000正统修为",
 		need: new BigNumber(10).pow(5).times(6),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus(100);
@@ -301,8 +301,8 @@ var skills = {
 	a2_4 : {
 		id: 'a2_4',
 		top: false,
-		degree: "進階",
-		info: "每秒增加7,000正統修為",
+		degree: "进阶",
+		info: "每秒增加7,000正统修为",
 		need: new BigNumber(10).pow(7),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus(700);
@@ -315,7 +315,7 @@ var skills = {
 		id: 'a2_5',
 		top: false,
 		degree: "精通",
-		info: "每秒增加90,000正統修為",
+		info: "每秒增加90,000正统修为",
 		need: new BigNumber(10).pow(8).times(2),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus(9000);
@@ -328,7 +328,7 @@ var skills = {
 		id: 'a2_6',
 		top: false,
 		degree: "高手",
-		info: "每秒增加100,000正統修為",
+		info: "每秒增加100,000正统修为",
 		need: new BigNumber(10).pow(10),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus(10000);
@@ -340,8 +340,8 @@ var skills = {
 	a2_7 : {
 		id: 'a2_7',
 		top: false,
-		degree: "大師",
-		info: "每秒增加3,000,000正統修為",
+		degree: "大师",
+		info: "每秒增加3,000,000正统修为",
 		need: new BigNumber(10).pow(11),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus(300000);
@@ -353,8 +353,8 @@ var skills = {
 	a2_8 : {
 		id: 'a2_8',
 		top: true,
-		degree: "宗師",
-		info: "每秒增加500,000,000正統修為",
+		degree: "宗师",
+		info: "每秒增加500,000,000正统修为",
 		need: new BigNumber(10).pow(16),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus(50000000);
@@ -367,8 +367,8 @@ var skills = {
 	b0_0 : {
 		id: 'b0_0',
 		top: false,
-		degree: "入門",
-		info: "每秒增加10一般修為",
+		degree: "入门",
+		info: "每秒增加10一般修为",
 		need: new BigNumber(500),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus( app.stand.num.times(1) );
@@ -379,8 +379,8 @@ var skills = {
 	b0_1 : {
 		id: 'b0_1',
 		top: false,
-		degree: "初級",
-		info: "每秒增加40一般修為",
+		degree: "初级",
+		info: "每秒增加40一般修为",
 		need: new BigNumber(2000),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus( app.stand.num.times(4) );
@@ -391,8 +391,8 @@ var skills = {
 	b0_2 : {
 		id: 'b0_2',
 		top: false,
-		degree: "中級",
-		info: "每秒增加100一般修為",
+		degree: "中级",
+		info: "每秒增加100一般修为",
 		need: new BigNumber(10).pow(4).times(3),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus( app.stand.num.times(10) );
@@ -403,8 +403,8 @@ var skills = {
 	b0_3 : {
 		id: 'b0_3',
 		top: false,
-		degree: "高級",
-		info: "每秒增加500一般修為，增加1點財富",
+		degree: "高级",
+		info: "每秒增加500一般修为，增加1点财富",
 		need: new BigNumber(10).pow(5).times(2),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus( app.stand.num.times(50) );
@@ -416,8 +416,8 @@ var skills = {
 	b0_4 : {
 		id: 'b0_4',
 		top: false,
-		degree: "進階",
-		info: "每秒增加6,000一般修為，增加1點財富",
+		degree: "进阶",
+		info: "每秒增加6,000一般修为，增加1点财富",
 		need: new BigNumber(10).pow(6).times(8),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus( app.stand.num.times(600) );
@@ -430,7 +430,7 @@ var skills = {
 		id: 'b0_5',
 		top: false,
 		degree: "精通",
-		info: "每秒增加60,000一般修為，增加2點財富",
+		info: "每秒增加60,000一般修为，增加2点财富",
 		need: new BigNumber(10).pow(8).times(2),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus( app.stand.num.times(6000) );
@@ -443,7 +443,7 @@ var skills = {
 		id: 'b0_6',
 		top: false,
 		degree: "高手",
-		info: "每秒增加990,000一般修為，增加2點財富和1點名氣",
+		info: "每秒增加990,000一般修为，增加2点财富和1点名气",
 		need: new BigNumber(10).pow(9),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus( app.stand.num.times(99000) );
@@ -456,8 +456,8 @@ var skills = {
 	b0_7 : {
 		id: 'b0_7',
 		top: false,
-		degree: "大師",
-		info: "每秒增加2,020,000一般修為，增加2點財富和2點名氣",
+		degree: "大师",
+		info: "每秒增加2,020,000一般修为，增加2点财富和2点名气",
 		need: new BigNumber(10).pow(10),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus( app.stand.num.times(202000) );
@@ -470,8 +470,8 @@ var skills = {
 	b0_8 : {
 		id: 'b0_8',
 		top: true,
-		degree: "宗師",
-		info: "每秒增加33,110,000一般修為，增加3點財富和2點名氣",
+		degree: "宗师",
+		info: "每秒增加33,110,000一般修为，增加3点财富和2点名气",
 		need: new BigNumber(10).pow(16),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus( app.stand.num.times(3311000) );
@@ -481,12 +481,12 @@ var skills = {
 		getPrev: () => { return skills.b0_7 },
 		getNext: () => { return null },
 	},
-	// 修財富
+	// 修财富
 	b1_0 : {
 		id: 'b1_0',
 		top: false,
-		degree: "入門",
-		info: "每秒增加10一般修為",
+		degree: "入门",
+		info: "每秒增加10一般修为",
 		need: new BigNumber(200),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus( app.stand.num.times(1) );
@@ -497,8 +497,8 @@ var skills = {
 	b1_1 : {
 		id: 'b1_1',
 		top: false,
-		degree: "初級",
-		info: "每秒增加20一般修為，增加1點財富",
+		degree: "初级",
+		info: "每秒增加20一般修为，增加1点财富",
 		need: new BigNumber(600),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus( app.stand.num.times(2) );
@@ -510,8 +510,8 @@ var skills = {
 	b1_2 : {
 		id: 'b1_2',
 		top: false,
-		degree: "中級",
-		info: "每秒增加100一般修為，增加1點財富",
+		degree: "中级",
+		info: "每秒增加100一般修为，增加1点财富",
 		need: new BigNumber(5000),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus( app.stand.num.times(10) );
@@ -523,8 +523,8 @@ var skills = {
 	b1_3 : {
 		id: 'b1_3',
 		top: false,
-		degree: "高級",
-		info: "每秒增加300一般修為，增加2點財富和1點名氣",
+		degree: "高级",
+		info: "每秒增加300一般修为，增加2点财富和1点名气",
 		need: new BigNumber(10).pow(4).times(4),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus( app.stand.num.times(30) );
@@ -537,8 +537,8 @@ var skills = {
 	b1_4 : {
 		id: 'b1_4',
 		top: false,
-		degree: "進階",
-		info: "每秒增加2,000一般修為，增加3點財富和2點名氣",
+		degree: "进阶",
+		info: "每秒增加2,000一般修为，增加3点财富和2点名气",
 		need: new BigNumber(10).pow(5).times(4),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus( app.stand.num.times(200) );
@@ -552,7 +552,7 @@ var skills = {
 		id: 'b1_5',
 		top: false,
 		degree: "精通",
-		info: "每秒增加10,000一般修為，增加4點財富和3點名氣",
+		info: "每秒增加10,000一般修为，增加4点财富和3点名气",
 		need: new BigNumber(10).pow(6).times(3),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus( app.stand.num.times(1000) );
@@ -566,7 +566,7 @@ var skills = {
 		id: 'b1_6',
 		top: false,
 		degree: "高手",
-		info: "每秒增加400,000一般修為，增加5點財富和4點名氣",
+		info: "每秒增加400,000一般修为，增加5点财富和4点名气",
 		need: new BigNumber(10).pow(8),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus( app.stand.num.times(40000) );
@@ -579,8 +579,8 @@ var skills = {
 	b1_7 : {
 		id: 'b1_7',
 		top: false,
-		degree: "大師",
-		info: "每秒增加600,000一般修為，增加8點財富和5點名氣",
+		degree: "大师",
+		info: "每秒增加600,000一般修为，增加8点财富和5点名气",
 		need: new BigNumber(10).pow(9),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus( app.stand.num.times(600000) );
@@ -593,8 +593,8 @@ var skills = {
 	b1_8 : {
 		id: 'b1_8',
 		top: true,
-		degree: "宗師",
-		info: "每秒增加9,000,000一般修為，增加10點財富和5點名氣",
+		degree: "宗师",
+		info: "每秒增加9,000,000一般修为，增加10点财富和5点名气",
 		need: new BigNumber(10).pow(16),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus( app.stand.num.times(900000) );
@@ -604,12 +604,12 @@ var skills = {
 		getPrev: () => { return skills.b1_7 },
 		getNext: () => { return null },
 	},
-	//	耗財
+	//	耗财
 	b2_0 : {
 		id: 'b2_0',
 		top: false,
-		degree: "入門",
-		info: "每秒增加10一般修為",
+		degree: "入门",
+		info: "每秒增加10一般修为",
 		need: new BigNumber(100),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus( app.stand.num.times(1) );
@@ -620,8 +620,8 @@ var skills = {
 	b2_1 : {
 		id: 'b2_1',
 		top: false,
-		degree: "初級",
-		info: "每秒增加20一般修為",
+		degree: "初级",
+		info: "每秒增加20一般修为",
 		need: new BigNumber(500),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus( app.stand.num.times(2) );
@@ -632,8 +632,8 @@ var skills = {
 	b2_2 : {
 		id: 'b2_2',
 		top: false,
-		degree: "中級",
-		info: "每秒增加80一般修為",
+		degree: "中级",
+		info: "每秒增加80一般修为",
 		need: new BigNumber(2000),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus( app.stand.num.times(8) );
@@ -644,8 +644,8 @@ var skills = {
 	b2_3 : {
 		id: 'b2_3',
 		top: false,
-		degree: "高級",
-		info: "每秒增加200一般修為",
+		degree: "高级",
+		info: "每秒增加200一般修为",
 		need: new BigNumber(8000),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus( app.stand.num.times(20) );
@@ -657,8 +657,8 @@ var skills = {
 	b2_4 : {
 		id: 'b2_4',
 		top: false,
-		degree: "進階",
-		info: "每秒增加600一般修為",
+		degree: "进阶",
+		info: "每秒增加600一般修为",
 		need: new BigNumber(10).pow(4).times(3),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus( app.stand.num.times(60) );
@@ -671,7 +671,7 @@ var skills = {
 		id: 'b2_5',
 		top: false,
 		degree: "精通",
-		info: "每秒增加10,000一般修為，修練十分昂貴，耗費2點財富",
+		info: "每秒增加10,000一般修为，修练十分昂贵，耗费2点财富",
 		need: new BigNumber(10).pow(6),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus( app.stand.num.times(1000) );
@@ -684,7 +684,7 @@ var skills = {
 		id: 'b2_6',
 		top: false,
 		degree: "高手",
-		info: "每秒增加200,000一般修為，修練十分昂貴，耗費4點財富",
+		info: "每秒增加200,000一般修为，修练十分昂贵，耗费4点财富",
 		need: new BigNumber(10).pow(7),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus( app.stand.num.times(20000) );
@@ -696,8 +696,8 @@ var skills = {
 	b2_7 : {
 		id: 'b2_7',
 		top: false,
-		degree: "大師",
-		info: "每秒增加3,000,000一般修為，修練十分昂貴，耗費8點財富",
+		degree: "大师",
+		info: "每秒增加3,000,000一般修为，修练十分昂贵，耗费8点财富",
 		need: new BigNumber(10).pow(8),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus( app.stand.num.times(300000) );
@@ -709,8 +709,8 @@ var skills = {
 	b2_8 : {
 		id: 'b2_8',
 		top: true,
-		degree: "宗師",
-		info: "每秒增加777,000,000一般修為，修練十分昂貴，耗費10點財富",
+		degree: "宗师",
+		info: "每秒增加777,000,000一般修为，修练十分昂贵，耗费10点财富",
 		need: new BigNumber(10).pow(16),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.plus( app.stand.num.times(77700000) );
@@ -724,8 +724,8 @@ var skills = {
 	c0_0 : {
 		id: 'c0_0',
 		top: false,
-		degree: "入門",
-		info: "每秒增加20邪派修為",
+		degree: "入门",
+		info: "每秒增加20邪派修为",
 		need: new BigNumber(500),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.minus(2);
@@ -737,8 +737,8 @@ var skills = {
 	c0_1 : {
 		id: 'c0_1',
 		top: false,
-		degree: "初級",
-		info: "每秒增加100邪派修為",
+		degree: "初级",
+		info: "每秒增加100邪派修为",
 		need: new BigNumber(2000),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.minus(10);
@@ -750,8 +750,8 @@ var skills = {
 	c0_2 : {
 		id: 'c0_2',
 		top: false,
-		degree: "中級",
-		info: "每秒增加400邪派修為",
+		degree: "中级",
+		info: "每秒增加400邪派修为",
 		need: new BigNumber(10).pow(4),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.minus(40);
@@ -763,8 +763,8 @@ var skills = {
 	c0_3 : {
 		id: 'c0_3',
 		top: false,
-		degree: "高級",
-		info: "每秒增加1,000邪派修為",
+		degree: "高级",
+		info: "每秒增加1,000邪派修为",
 		need: new BigNumber(10).pow(5).times(2),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.minus(100);
@@ -776,8 +776,8 @@ var skills = {
 	c0_4 : {
 		id: 'c0_4',
 		top: false,
-		degree: "進階",
-		info: "每秒增加30,000邪派修為",
+		degree: "进阶",
+		info: "每秒增加30,000邪派修为",
 		need: new BigNumber(10).pow(6).times(5),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.minus(3000);
@@ -790,7 +790,7 @@ var skills = {
 		id: 'c0_5',
 		top: false,
 		degree: "精通",
-		info: "每秒增加550,000邪派修為",
+		info: "每秒增加550,000邪派修为",
 		need: new BigNumber(10).pow(8),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.minus(55000);
@@ -803,7 +803,7 @@ var skills = {
 		id: 'c0_6',
 		top: false,
 		degree: "高手",
-		info: "每秒增加12,300,000邪派修為",
+		info: "每秒增加12,300,000邪派修为",
 		need: new BigNumber(10).pow(9).times(2),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.minus(1230000);
@@ -815,8 +815,8 @@ var skills = {
 	c0_7 : {
 		id: 'c0_7',
 		top: false,
-		degree: "大師",
-		info: "每秒增加55,555,500邪派修為",
+		degree: "大师",
+		info: "每秒增加55,555,500邪派修为",
 		need: new BigNumber(10).pow(11),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.minus(5555550);
@@ -828,8 +828,8 @@ var skills = {
 	c0_8 : {
 		id: 'c0_8',
 		top: true,
-		degree: "宗師",
-		info: "每秒增加333,333,300邪派修為",
+		degree: "宗师",
+		info: "每秒增加333,333,300邪派修为",
 		need: new BigNumber(10).pow(16),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.minus(33333330);
@@ -842,8 +842,8 @@ var skills = {
 	c1_0 : {
 		id: 'c1_0',
 		top: false,
-		degree: "入門",
-		info: "每秒增加50邪派修為，汙染道心",
+		degree: "入门",
+		info: "每秒增加50邪派修为，污染道心",
 		need: new BigNumber(500),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.minus(5);
@@ -855,8 +855,8 @@ var skills = {
 	c1_1 : {
 		id: 'c1_1',
 		top: false,
-		degree: "初級",
-		info: "每秒增加500邪派修為，汙染道心",
+		degree: "初级",
+		info: "每秒增加500邪派修为，污染道心",
 		need: new BigNumber(3000),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.minus(50);
@@ -868,8 +868,8 @@ var skills = {
 	c1_2 : {
 		id: 'c1_2',
 		top: false,
-		degree: "中級",
-		info: "每秒增加8,000邪派修為，汙染道心",
+		degree: "中级",
+		info: "每秒增加8,000邪派修为，污染道心",
 		need: new BigNumber(10).pow(4).times(5),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.minus(800);
@@ -881,8 +881,8 @@ var skills = {
 	c1_3 : {
 		id: 'c1_3',
 		top: false,
-		degree: "高級",
-		info: "每秒增加60,000邪派修為，汙染道心",
+		degree: "高级",
+		info: "每秒增加60,000邪派修为，污染道心",
 		need: new BigNumber(10).pow(5).times(2),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.minus(6000);
@@ -894,8 +894,8 @@ var skills = {
 	c1_4 : {
 		id: 'c1_4',
 		top: false,
-		degree: "進階",
-		info: "每秒增加444,000邪派修為，汙染道心",
+		degree: "进阶",
+		info: "每秒增加444,000邪派修为，污染道心",
 		need: new BigNumber(10).pow(5).times(6),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.minus(44400);
@@ -908,7 +908,7 @@ var skills = {
 		id: 'c1_5',
 		top: false,
 		degree: "精通",
-		info: "每秒增加6,666,660邪派修為，汙染道心",
+		info: "每秒增加6,666,660邪派修为，污染道心",
 		need: new BigNumber(10).pow(6),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.minus(666666);
@@ -921,7 +921,7 @@ var skills = {
 		id: 'c1_6',
 		top: false,
 		degree: "高手",
-		info: "每秒增加8,888,880邪派修為，汙染道心",
+		info: "每秒增加8,888,880邪派修为，污染道心",
 		need: new BigNumber(10).pow(7),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.minus(888888);
@@ -935,8 +935,8 @@ var skills = {
 	c1_7 : {
 		id: 'c1_7',
 		top: true,
-		degree: "大師",
-		info: "每秒增加11,111,110邪派修為，汙染道心",
+		degree: "大师",
+		info: "每秒增加11,111,110邪派修为，污染道心",
 		need: new BigNumber(10).pow(16),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.minus(1111111);
@@ -947,12 +947,12 @@ var skills = {
 		getPrev: () => { return skills.c1_6 },
 		getNext: () => { return null },
 	},
-	// 難練
+	// 难练
 	c2_0 : {
 		id: 'c2_0',
 		top: false,
-		degree: "入門",
-		info: "每秒增加50邪派修為，邪功練法詭譎損害名氣",
+		degree: "入门",
+		info: "每秒增加50邪派修为，邪功练法诡谲损害名气",
 		need: new BigNumber(10).pow(4),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.minus(5);
@@ -965,8 +965,8 @@ var skills = {
 	c2_1 : {
 		id: 'c2_1',
 		top: false,
-		degree: "初級",
-		info: "每秒增加60邪派修為，邪功練法詭譎損害名氣",
+		degree: "初级",
+		info: "每秒增加60邪派修为，邪功练法诡谲损害名气",
 		need: new BigNumber(10).pow(6),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.minus(6);
@@ -979,8 +979,8 @@ var skills = {
 	c2_2 : {
 		id: 'c2_2',
 		top: false,
-		degree: "中級",
-		info: "每秒增加70邪派修為，邪功練法詭譎損害名氣",
+		degree: "中级",
+		info: "每秒增加70邪派修为，邪功练法诡谲损害名气",
 		need: new BigNumber(10).pow(7),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.minus(7);
@@ -993,8 +993,8 @@ var skills = {
 	c2_3 : {
 		id: 'c2_3',
 		top: false,
-		degree: "高級",
-		info: "每秒增加80邪派修為，邪功練法詭譎、損名傷身",
+		degree: "高级",
+		info: "每秒增加80邪派修为，邪功练法诡谲、损名伤身",
 		need: new BigNumber(10).pow(7).times(2),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.minus(8);
@@ -1008,8 +1008,8 @@ var skills = {
 	c2_4 : {
 		id: 'c2_4',
 		top: false,
-		degree: "進階",
-		info: "每秒增加90邪派修為，邪功練法詭譎、損名傷身",
+		degree: "进阶",
+		info: "每秒增加90邪派修为，邪功练法诡谲、损名伤身",
 		need: new BigNumber(10).pow(7).times(3),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.minus(9);
@@ -1024,7 +1024,7 @@ var skills = {
 		id: 'c2_5',
 		top: false,
 		degree: "精通",
-		info: "每秒增加100邪派修為，邪功練法詭譎、損名傷身",
+		info: "每秒增加100邪派修为，邪功练法诡谲、损名伤身",
 		need: new BigNumber(10).pow(7).times(4),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.minus(10);
@@ -1039,7 +1039,7 @@ var skills = {
 		id: 'c2_6',
 		top: false,
 		degree: "高手",
-		info: "每秒增加200邪派修為，邪功練法詭譎、損名傷身",
+		info: "每秒增加200邪派修为，邪功练法诡谲、损名伤身",
 		need: new BigNumber(10).pow(7).times(5),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.minus(20);
@@ -1053,8 +1053,8 @@ var skills = {
 	c2_7 : {
 		id: 'c2_7',
 		top: false,
-		degree: "大師",
-		info: "每秒增加500邪派修為，邪功練法詭譎、損名傷身",
+		degree: "大师",
+		info: "每秒增加500邪派修为，邪功练法诡谲、损名伤身",
 		need: new BigNumber(10).pow(9),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.minus(50);
@@ -1068,8 +1068,8 @@ var skills = {
 	c2_8 : {
 		id: 'c2_8',
 		top: true,
-		degree: "宗師",
-		info: "每秒增加11,111,111,111,110邪派修為，邪功總算大成",
+		degree: "宗师",
+		info: "每秒增加11,111,111,111,110邪派修为，邪功总算大成",
 		need: new BigNumber(10).pow(16),
 		run: () => {
 			app.pointPerSec = app.pointPerSec.minus(1111111111111);
