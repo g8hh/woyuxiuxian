@@ -1,0 +1,346 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh-cn"> 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="louisalflame">
+    <title>我欲修仙_在线修仙游戏_内测版</title>
+    <meta name="keywords" content="修仙,我欲修仙,修仙网,修仙游戏,在线修仙游戏">
+    <meta name="description" content="我欲修仙网是道友唯一指定在线修仙网，为国内几十万道友提供在线修仙服务，我欲修仙网为道友提供最新最实用的修仙体验。我欲修仙,就在今天,得道升天,法力无边">
+    
+
+	
+	<!-- Bootstrap -->
+	<script type="text/javascript" src="lib/jquery-1.11.0.min.js"></script>	
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css">	
+    <script type="text/javascript" src="lib/bootstrap/bootstrap.min.js"></script>
+	
+	
+	<!-- JQuery -->
+	<script type="text/javascript" src="lib/jquery-3.2.1.min.js"></script>	
+	<script type="text/javascript" src="lib/jquery.cookie.js"></script>	
+	
+	<!-- BigNumber -->
+	<script type="text/javascript" src='lib/bignumber.min.js'></script>
+	
+	<!-- LZstring -->
+	<script type="text/javascript" src='lib/LZstring/lz-string.min.js'></script>
+	
+	<!-- Vue Core JavaScript  -->
+    <script src="lib/vue.js"> </script>
+    
+    <script type="text/javascript">
+		function isvideo(oDiv){
+			var vDiv = document.getElementById(oDiv);
+			vDiv.style.display = (vDiv.style.display == 'block')?'none':'block';
+		}
+	</script>
+    <script language="javascript">
+		$(document).ready(function() {
+            var timer = setInterval("set_progress()",1000);
+        });
+		function set_progress(){
+			var current = $("#jindutiao").val();
+			var number = $('#now_num').html().split(":");
+			var now_num = Number(number[1].replace(/,/g, ""));//当前值
+			var total = $("#total_num").text();
+			var total_num = Number(total.replace(/,/g, ""))
+			var jindu = Math.round((now_num/total_num)*100)
+			$("#jindutiao").val(jindu);
+		}
+	</script>
+	
+<style type="text/css">
+<!--
+.STYLE1 {color: #FF0000}
+.STYLE3 {color: #FF0000; font-weight: bold; }
+.STYLE6 {color: #000000; }
+-->
+#video{display:none;}
+</style>
+</head>
+
+<body>
+	<!-- 主面板 START -->
+	<div id="app" v-bind:style="backCss">
+        <div class="container">
+			<div class="row">
+				<div v-bind:style="centerCss" class="col-sm-12 col-md-10 col-md-offset-1 text-center">            
+					<hr/>
+					<!-- 面板1 START -->
+					<div class="row">
+						<div style="text-align:left;margin:5px;">    
+							<!-- 消息滚动 START -->
+							<!-- TODO::改为每五秒滚动一次的游戏小贴士 -->
+						  <marquee direction="up" height="40" onMouseOut="this.start()" onMouseOver="this.stop()" scrollAmount="1" scrollDelay="1">
+								<p align="center">
+									<span class="STYLE3">公告：</span>2019年12月18日 再次平衡数值，新玩法正在制作中…</p>
+<p align="center">增加了一个彩蛋，需要用电脑端触发。（提示：左下角）</p>
+							    <p align="center">
+								  <span class="STYLE6">古神、神裔名称选取中，道友何不命名一番？</span><span class="STYLE3 STYLE1">加群讨论</span></p>
+							    <p align="center">ps：如网站出现乱码道友请刷新后重试。</p>
+
+						  </marquee>
+							<!-- 消息滚动 END -->
+							
+							<!-- 群宣传 START -->
+							<p align="right">
+								<span class="STYLE1">
+									修仙Q群：<a target="_blank" href="https://jq.qq.com/?_wv=1027&k=5hsoRb7">292994508</a>								 
+								</span>
+							</p>
+							<!-- 群宣传 END -->
+						</div>
+						
+						<h1 id="now_num">修为: {{ numFilter.txt( point.round().toString() ) }} </h1>
+						<div class="col-md-4 text-left">
+							第{{ worldTimes }}重天 <h2>{{ world[0] }}界</h2>
+						</div>
+						<div class="col-md-4 text-center">
+							<button class="btn btn-lg btn-default" v-bind:style="buttonCss" v-on:click="_addByBody">修炼</button>
+						</div>
+						<div class="col-md-4 text-right">
+							<h3>{{ level.name }} 境界</h3>
+							<p id="total_num"><progress value="0" max="100" id="jindutiao">
+    </progress> {{ numFilter.txt( level.max.toString() ) }}</p>
+							<p>每秒
+							<template v-if="!pointPerSec.lessThan(0)">增加</template>
+							<template v-else>减少</template>
+							{{ numFilter.txt( pointPerSec.abs().times(10).round().toString() ) }} 修为</p>
+						</div> 
+					</div>
+					<!-- 面板1 END -->
+
+					<!-- 面板2 START -->
+					<div class="row"  v-bind:style="tableRowCss">
+                    </br>
+                    <table v-bind:style="tableCss" id="status"  class="table table-bordered table-condensed">
+							<tbody> 
+								<tr v-bind:style="Tr0css">
+									<td>寿命</td>
+									<td>阵营</td>
+									<td>名望</td>
+									<td>财富</td>
+								</tr>
+								<tr>
+									<td> {{ life.toString() }} / {{ pastLife.toString() }} 秒</td>
+									<td> {{ stand.name }} {{ standPoint.div(100).round().toString() }}% </td>
+									<td> {{ numFilter.txt( renown.toString() ) }} </td>
+									<td> {{ numFilter.txt( money.toString() ) }}金 </td>
+								</tr>
+								
+								<tr v-bind:style="Tr1css">
+									<td colspan="4" class="text-left">归属</td>
+								</tr>
+								<tr>
+									<td ><h4> {{ group.name }} </h4></td>
+									<td colspan="2"> 
+										<template v-if="group.exist">{{ group.object.info }}</template> 
+										<template v-else>
+											<span v-if="groupWait>0">耗费 {{ groupWait }} 秒游历天下，</span>
+											花费 100 名望探访名师
+										</template>
+									</td>
+									<td>
+										<template v-if="group.exist">
+										<button class="btn btn-default" v-on:click="_exitGroup">金盆洗手</button>
+										</template>
+										<template v-else>
+										<button class="btn btn-default" v-on:click="_joinGroup" :disabled="groupWait!=0 || renown.lessThan(100)">拜师学艺</button>
+										</template>		
+									</td>
+								</tr>
+								
+							</tbody>
+						</table>
+						
+						<div id= "divID" style= "display:block">
+						<table v-bind:style="tableCss" id="info" class="table table-bordered table-condensed">
+							<tbody> 
+								<tr v-bind:style="Tr0css">
+									<td>名称</td>
+									<td>能力</td>
+									<td>升级需求</td>
+									<td> </td>
+								</tr>
+								<tr v-bind:style="Tr1css">
+									<td colspan="4" class="text-left">身体</td>
+								</tr>
+								<tr>
+									<td><h4>{{ body.name }}</h4></td>
+									<td>每次修炼增加 {{ numFilter.txt( body.num.toString() ) }} 修为</td>
+									<td><template v-if="!body.top"> {{ numFilter.txt( body.need.toString() ) }} 修为</template></td>
+									<td><button class="btn btn-default" v-on:click="_bodyLvUp" :disabled="point.lessThan( body.need ) || body.top ">升级</button></td>
+								</tr>
+								<tr v-bind:style="Tr2css">
+									<td colspan="4" class="text-left">灵根</td>
+								</tr>
+								<tr>
+									<td><h4>{{ talent.name }}</h4></td>
+									<td>可修炼 {{ talent.num.toString() }} 项功法</td>
+									<td><template v-if="!talent.top">{{ numFilter.txt( talent.need.toString() ) }} 修为</template></td>
+									<td><button class="btn btn-default" v-on:click="_talentLvUp" :disabled="point.lessThan( talent.need ) || talent.top ">升级</button></td>
+								</tr>
+								<tr  v-bind:style="Tr3css" id="skillRow">
+									<td class="text-left">功法：{{ skills.length }}项</td>
+									<td colspan="2" class="text-center"><template v-if="talent.num.greaterThan( skills.length)">门槛需达 {{ numFilter.txt( level.max.div(2).toString() ) }} 修为，消耗修为至{{skills.length+2}}分之一</template></td>
+									<td>
+										<template v-if="talent.num.greaterThan( skills.length)">
+										<button class="btn btn-default" v-on:click="_getNewSkill" :disabled="point.lessThan( level.max.div(2) ) ">学习新功法</button>
+										</template>	
+									</td>
+								</tr>
+								<tr v-for="(skill, id) in skills">
+									<td><h5> {{ skill.name }} - {{ skill.object.degree }} </h5></td> 
+									<td>{{ skill.object.info }}</td> 
+									<td><template v-if="!skill.object.top">{{ numFilter.txt( skill.object.need.toString() ) }} 修为</template></td>
+									<td>
+										<button class="btn btn-default" v-on:click="_skillLvUp(id)" :disabled="point.lessThan( skill.object.need ) || skill.object.top ">升级</button>
+										<button class="btn btn-default" v-on:click="_skillRemove(id)" :disabled="money.lessThan(removeCost)">散功({{ removeCost.toString() }}金)</button>
+									</td>
+								</tr>					
+							</tbody>
+						</table>
+						</div>
+                        </br>
+<input type=button value= "显示身体、灵根、功法" onclick='document.getElementById("divID").style.display="block"'>
+						<input type=button value= "隐藏身体、灵根、功法" onclick='document.getElementById("divID").style.display="none"'>
+						<br/>
+                        <br/>
+						
+						<div id= "divID1" style= "display:block">
+						<table v-bind:style="tableCss" id="status"  class="table table-bordered table-condensed">
+							<tbody> 
+								<tr v-bind:style="Tr1css">
+									<td colspan="4" class="text-left">副本</td>
+								</tr>
+								<tr>
+									<td ><h4> {{ group1.name }} </h4></td>
+									<td colspan="2"> 
+										<template >为世人所厌恶，大于500金币，献祭8成金币给古神获取命运博弈。 
+										<span v-if="group1Wait>0"> {{ group1Wait }} 秒后即可献祭。</span></template></td>
+									<td>
+										<template >
+										<button class="btn btn-default" v-on:click="_joinGroup1" :disabled=" money.lessThan(500)">献祭赌博</button>
+
+										</template>						</td>
+								</tr>
+								<tr>
+									<td ><h4> {{ group2.name }} </h4></td>
+									<td colspan="2"> 
+										<template >世人所信仰的神，大于1000寿元，贡献7成寿元给予神明。
+										<span v-if="group2Wait>0"> {{ group2Wait }} 秒后即可贡献。</span></template></td>
+									<td>
+										<template >
+										<button class="btn btn-default" v-on:click="_joinGroup2" :disabled="group2Wait!=0 || life.lessThan(1000)">信仰贡献</button>
+
+										</template>						</td>
+								</tr>
+								
+							</tbody>
+						</table>
+						</div>
+						</br>
+						<input type=button value= "显示副本信息" onclick='document.getElementById("divID1").style.display="block"'>
+						<input type=button value= "隐藏副本信息" onclick='document.getElementById("divID1").style.display="none"'>
+						</br>
+						<br>
+						<table v-bind:style="tableCss" id="items"  class="table table-bordered table-condensed">
+							<tbody> 
+							<tr v-bind:style="Tr4css" id="itemRow">
+								<td class="text-left">
+								法宝：{{ items.length }}个
+								</td>
+								<td colspan="2" class="text-center">
+									<template v-if="itemWait!=0">
+									下次秘境开启 {{ itemWait }} 秒 ， 
+									</template>
+									门槛需达 {{ numFilter.txt( level.max.div(2).greaterThan( itemCost ) ? level.max.div(2).toString() : itemCost.toString() ) }} 修为，
+									消耗九成修为<br/>
+									拥有法宝越多、阁下的孽缘越多，可能会消耗寿命
+								</td>
+								<td class="text-center">
+									<button class="btn btn-default" v-on:click="_getNewItem" :disabled="point.lessThan( level.max.div(2) ) || point.lessThan(itemCost) || itemWait!=0 "> 寻找机缘</button>							
+									<template v-if="items.length!=0">
+									<button class="btn btn-default" v-on:click="_removeItems">舍弃法宝</button> 
+									</template>
+								</td>
+							</tr>
+							<tr v-for="(i, id) in items">
+								<td><h5> {{ i.name }} </h5></td> 
+								<td colspan="2" class="text-left"> {{ i.object.info }} </td>
+								<td>
+									<div v-if="i.object.useAble">
+										<button class="btn btn-default" v-on:click="_useItem(id)"> 使用 </button>
+									</div>
+									<div v-else style="color:gray;"> 被动 </div>
+									
+								</td>
+							</tr> 
+							</tbody>
+						</table>
+						<br>
+					</div> 
+					<hr/>
+					<!-- 存档面板 START -->
+					<div v-bind:style="logCss" class="text-left" >
+						<p v-for="t in logTxt">
+							{{ t }}
+						</p>
+					</div>
+
+					<div>
+						<input id="data" v-bind:style="dataCss" type="text" v-model="record" >
+						<button class="btn btn-default" v-on:click="_showData">记录传承</button>
+						<button class="btn btn-default" v-on:click="_loadData">接受传承</button>
+						<button class="btn btn-default" v-on:click="_clearData">重新做人</button>
+					</div>
+					<!-- 存档面板 END -->
+					<hr/>
+				</div>
+			</div>  
+		</div>
+        
+        
+<!--
+        <div style="cursor:hand" onclick="isvideo('video')"><b>点击观看我欲修仙视频</b></div>
+		<div id="video">
+        </p>
+        </p>
+		<p align="center">
+		<video src="http://www.chsdesign.cn/woyuxiuxian.mp4" controls scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">您的浏览器不支持 video 标签视频播放。
+</video>
+		</p>
+        </div>
+-->
+        
+        
+
+	</div>
+	<!-- 主面板 END -->
+
+
+	<!-- JiaThis Button BEGIN -->
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?move=0&amp;btn=r5.gif" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+
+	<script src="script/level.js"> </script>
+    <script src="script/stand.js"> </script>
+    <script src="script/skill.js"> </script>
+    <script src="script/item.js"> </script>    
+    <script src="script/nameMaker.js"> </script>
+
+	<script src="script/core-main.js" > </script>
+	<script src="script/core-timer.js"></script> 
+	<!--客服 开始-->
+<link rel="stylesheet" href="//g8hh.com/static/css/kf.css" type="text/css" media="screen" charset="utf-8">
+<script src="//g8hh.com/static/js/kf.js"></script>
+<!-- 客服 结束 -->
+<!--站长统计-->
+    <div style="display: none">
+        <script type="text/javascript" src="https://v1.cnzz.com/z_stat.php?id=1279902880&web_id=1279902880"></script>
+    </div>
+
+</body>
+</html>
